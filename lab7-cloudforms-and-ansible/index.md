@@ -453,7 +453,7 @@ In the following step we create a Service Catalog Item which will execute an Ans
 
     ***Variable:*** package_name
 
-    ***Default Value:*** httpd
+    ***Default Value:*** apache2
 
     :heavy_check_mark: ***NOTE: Click the little plus ("+")*** icon to save the row. We only use one variable in this playbook, but your Playbooks might use more.
 
@@ -495,7 +495,7 @@ We want to make sure the resulting Service Catalog Item actually works.
 
     The variable specified when creating the Service Catalog Item, which can be overriden by the end user during order:
 
-    ***package_name:*** httpd (should already be the default)
+    ***package_name:*** apache2 (should already be the default)
 
     ![parameters for the Ansible InstallPackage Playbook](img/installpackage-order.png)
 
@@ -659,7 +659,7 @@ We want to test the resulting customization and see how it works from a user poi
 
     ![Ansible Playbook output](img/my-service-ansible-playbook-output.png)
 
-:heavy_check_mark: ***NOTE*** Ansible is idempotent - this means you can run the same Playbook many times and Ansible detects if the desired state was already reached. In this lab, no changes are necessary, because the package httpd is already installed.
+:heavy_check_mark: ***NOTE*** Ansible is idempotent - this means you can run the same Playbook many times and Ansible detects if the desired state was already reached. In this lab, no changes are necessary, because the package apache2 is already installed.
 
 This concludes this part of the Ansible lab.
 
@@ -888,7 +888,7 @@ To be able to use the new Service Dialog with our button, we first have to creat
 
     ***Variable:*** package_name
 
-    ***Default Value:*** httpd
+    ***Default Value:*** apache2
 
     :heavy_check_mark: ***NOTE: Click the little plus ("+")*** icon to save the row.
 
@@ -962,7 +962,7 @@ As the last step, we have to change the definition of our button, to point to th
 
 This concludes this part of the Ansible lab.
 
-:+1: ***OPTIONAL*** Feel free to repeat this part of the lab with a different package name. You could use "screen" as an example instead of httpd - or some other package you want to install.
+:+1: ***OPTIONAL*** Feel free to repeat this part of the lab with a different package name. You could use "screen" as an example instead of apache2 - or some other package you want to install.
 
 ## Run an Ansible Playbook during VM provisioning
 
@@ -1105,7 +1105,7 @@ Starting with CloudForms 4.6 we can create Methods of type "Playbook" which, ins
 
     ***Input Name:*** package_name
 
-    ***Default Value:*** httpd
+    ***Default Value:*** apache2
 
     :warning: ***WARNING*** Don't forget to click on the blue plus (+) icon to save the Input Parameter
 
@@ -1184,7 +1184,7 @@ To execute this new state after the Virtual Machine was created, we have to chan
 
 ### Test the updated Virtual Machine Provisioning State Machine
 
-We want to verify the applied changed by deploying a Virtual Machine and check if httpd was actually installed properly.
+We want to verify the applied changed by deploying a Virtual Machine and check if apache2 was actually installed properly.
 
 1. Navigate to ***Compute*** -> ***Infrastructure*** -> ***Virtual Machines***
 
@@ -1236,7 +1236,7 @@ We want to verify the applied changed by deploying a Virtual Machine and check i
 
         :heavy_check_mark: ***NOTE*** If you do this the first time, your Web Browser might block the Popup Window!
 
-    1. Perform Smart State Analysis: Navigate to the Virtual Machine you just ordered and click on ***Configuration*** -> ***Perform SmartState Analysis***. The action can take a few minutes to complete. After it finished, you should see the list of installed packages and can verify httpd is on the list
+    1. Perform Smart State Analysis: Navigate to the Virtual Machine you just ordered and click on ***Configuration*** -> ***Perform SmartState Analysis***. The action can take a few minutes to complete. After it finished, you should see the list of installed packages and can verify apache2 is on the list
 
     1. Check the log files: First you will have to SSH into the workstation and from there you can log into CloudForms. You should find the hostnames in the RHPDS details. The Ansible logs can be found in /var/lib/awx/job_status.
 
