@@ -633,7 +633,7 @@ We want to test the resulting customization and see how it works from a user poi
 
     ![VM cfme008 is turned on](img/cfme-008-powered-on-overview.png)
 
-1. On the details page of "cfme008" note the new menu "Tools". Click to see the new button "Install Package"
+1. On the details page of "ubuntu2" note the new menu "Tools". Click to see the new button "Install Package"
 
     ![VM with additional tools menu](img/cfme-008-tools-button.png)
 
@@ -641,7 +641,7 @@ We want to test the resulting customization and see how it works from a user poi
 
     ![Ansible button dialog](img/ansible-button-dialog.png)
 
-1. We can accept the values and click on ***Submit***
+1. Select the ubuntu2 credentials and click on ***Submit***
 
 1. Navigate to ***Services*** -> ***My Services***
 
