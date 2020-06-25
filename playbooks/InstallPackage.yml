@@ -13,4 +13,4 @@
       validate: 'visudo -cf %s'
   - name: install package {{ package_name }}
     apt: name={{ package_name }} state=present
-  become: yes
+    become: yes
