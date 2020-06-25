@@ -6,5 +6,5 @@
 
   tasks:
   - name: install package {{ package_name }}
-    apt: name={{ package_name }} state=present  
-  
+    apt: name={{ package_name }} state=present
+  become: yes
