@@ -658,6 +658,8 @@ We want to test the resulting customization and see how it works from a user poi
 1. Click on the ***Provisioning*** tab to see output from your Ansible Playbook
 
     ![Ansible Playbook output](img/my-service-ansible-playbook-output.png)
+    
+:heavy_check_mark: ***NOTE** You should have detected an errror in the execution of the ansible script behind the button. This has to do with the fact that you use ibmuser (not root) as an identity to logon to the VM. It is now your task to figure out how to fix this. Hint : Take a look at the identity definition of the ibmuser. You should note there is some parameters you can add about identity escalation. Also look at the defined task. Also there you can modify some parameters to ensure identity escalation.
 
 :heavy_check_mark: ***NOTE*** Ansible is idempotent - this means you can run the same Playbook many times and Ansible detects if the desired state was already reached. In this lab, no changes are necessary, because the package apache2 is already installed.
 
